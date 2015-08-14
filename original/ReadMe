@@ -1,0 +1,137 @@
+VIII/1A             The 3C and 3CR  Catalogues            (Edge+ 1959-1962)
+================================================================================
+A Survey of Radio Sources at a Frequency of 159Mc/s
+     Edge D.O., Shakeshaft J.R., McAdam W.B., Baldwin J.E., Archer S.
+    <Mem. Roy. Astron. Soc. 68, 37 (1959)>
+    =1959MmRAS..68...37E
+The Revised 3C Catalogue of Radio Sources
+     Bennett A.S.
+    <Mem. Roy. Astron. Soc. 68, 163 (1962)>
+    =1962MmRAS..68..163B
+================================================================================
+ADC_Keywords: Radio sources ; Surveys
+
+Description:
+    The 3C Catalog is the result of observations with the Cambridge
+    four-element interferometer at a frequency of 159MHz, and contains
+    471 sources between declinations -22 and +71degrees, with a flux
+    density larger than 8Jy.
+
+    The Revised version of the 3C (3CR) is based on new observations at a
+    frequency of 178MHz, and represents a survey of all sources North of
+    -05degrees with a flux density brighter than 9Jy, except in the areas
+    near the ridge of galactic emission. The original numbering system has
+    been preserved.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName   Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe         80        .   This file
+3c.dat        128      471   3C catalog of radio sources (1959)
+3cr.dat       208      328   The revised 3C catalogue of radio sources (1962)
+--------------------------------------------------------------------------------
+
+See also:
+   J/PASP/97/932 : 3CR Source Identifications (Spinrad 1985)
+
+Byte-by-byte Description of file: 3c.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label    Explanations
+--------------------------------------------------------------------------------
+   1-  3  I3    ---      3C       [1,471] 3C source designation
+       4  A1    ---    u_3C       [)] sources with open doubt (1)
+       5  A1    ---    f_3C       [+] observed in both 3C(a) and 3C(c) surveys
+       6  A1    ---    q_3C       [*] sources with considerable confidence
+       7  A1    ---    n_3C       [AB] Analysis flag (2)
+  10- 12  A3    ---    f_RAs      [-<> ] Possible lobe confusion on R.A. (3)
+  13- 14  I2    h        RAh      Right ascension (1950.0)
+  16- 17  I2    min      RAm      Right ascension (1950.0)
+  19- 22  F4.1  s        RAs      Right ascension (1950.0)
+  23- 24  I2    s      e_RAs      ? rms uncertainty on right ascension
+  26- 27  A2    ---    f_DEm      [v^ ] Possible lobe confusion on Decl. (3)
+      28  A1    ---      DE-      Declination sign (1950.0)
+  29- 30  I2    deg      DEd      Declination (1950.0)
+  32- 35  F4.1  arcmin   DEm      Declination (1950.0)
+  36- 37  I2    arcmin e_DEm      ? rms uncertainty on declination
+      38  A1    ---    u_DEm      [)] Uncertainty flag on DE rms
+  40- 46  F7.1  Jy       S159MHz  Flux density at 159MHz
+      47  A1    ---    n_S159MHz  [W] indicates a flux density taken from
+                                       Whitfield (1957MNRAS.117..680W)
+  48- 52  F5.1  Jy     e_S159MHz  ? rms uncertainty on S159MHz
+      53  A1    ---    u_S159MHz  [)] Uncertainty flag on flux rms
+      54  A1    ---    l_Diam     [~<>] Limit flag on Diam
+  55- 58  F4.1  arcmin   Diam     ? Angular diameter
+  60- 62  F3.1  arcmin e_Diam     ? rms uncertainty on Diam
+  64- 67  A4    ---    n_Diam     Note (C: Complex, >12' upper limit for Diam)
+  68- 70  I3    deg      GLON     Galactic longitude
+  73- 75  I3    deg      GLAT     Galactic latitude
+  77-128  A52   ---      Notes    Suggested correspondences and notes (4)
+--------------------------------------------------------------------------------
+Note (1): the numbers with parenthesis are doubtful
+    either because the data are incomplete (due mainly to interferences)
+    or because of exceptionally large spreads in the individual position
+    or amplitude estimates.
+
+Note (2): analysis flag:
+    'A' indicates that the records could be analysed without recourse to a
+        vector analysis of confused traces.
+    'B' shows that some analysis of confused traces was made.
+
+Note (3): Where there is some ambiguity in deciding on the correct
+    interference lobe the alternative positions are marked thus:
+     RA:  -> Possibly lobe-shifted earlier
+          <- Possibly lobe-shifted later
+         <-> Possibly lobe-shifted earlier or later
+     DE:  ^  Possibly lobe-shifted North
+          v  Possibly lobe-shifted South
+         v^  Possibly lobe-shifted North or South
+
+Note (4):
+    The symbols ->, <-, ^, v are used to indicate that a 2C source
+    (Shakeshaft et al., 1955MmRAS..67..106S) has had to be lobe-shifted
+    earlier (->), later (<-), North (^) or South (v).
+    Sources denoted DWD will be discussed by Dewhirst in a separate paper.
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: 3cr.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units    Label   Explanations
+--------------------------------------------------------------------------------
+   1-  5  A5    ---      3CR     3CR source designation (1)
+   8-  9  I2    h        RAh     Right ascension (1950.0)
+  11- 12  I2    min      RAm     Right ascension (1950.0)
+  14- 17  F4.1  s        RAs     Right ascension (1950.0)
+  20- 23  F4.1  s      e_RAs     rms uncertainty on right ascension
+      25  A1    ---      DE-     Declination sign (1950.0)
+  26- 27  I2    deg      DEd     Declination (1950.0)
+  29- 32  F4.1  arcmin   DEm     Declination (1950.0)
+  34- 39  F6.2  arcmin e_DEm     rms uncertainty on declination
+  41- 43  I3    deg      GLON    Galactic longitude
+  46- 48  I3    deg      GLAT    Galactic latitude
+  50- 56  F7.1  Jy       S178MHz Flux density at 178MHz
+      57  A1    ---    n_S178MHz [*] 469{lambda} interferometer (2)
+      61  A1    ---    l_Diam    Limit flag on Diam
+  62- 65  F4.1  ---      Diam    ? Angular diameter
+      66  A1    ---    x_Diam    ["'] Units of diameter (' or ")
+  67- 70  F4.1  ---    e_Diam    ? rms uncertainty on Diam
+      71  A1    ---    f_Diam    [)] Confusing sources
+  73-208  A136  ---      Notes   Notes
+--------------------------------------------------------------------------------
+Note (1): The numbering of the sources follows as far as possible that of
+    the 3C catalogue. Some sources are omitted on account of errors in the
+    original list, others because areas south of -5{deg} have not been
+    covered in the new survey; a number of additional sources in areas not
+    covered in the original survey have been added. The 3CR numbers keep
+    the ordering by increasing R.A.
+
+Note (2): All flux densities observed with the 469{lambda} interferometer
+    are marked by an asterisk; for all other sources the total power
+    measurement was used, subtracting the systematic correction of 1.5Jy,
+    according to the discussion by Bennett (1962MNRAS.125...75B)
+--------------------------------------------------------------------------------
+
+History:
+    Prepared via OCR at CDS.
+================================================================================
+(End)                         James Marcout, Patricia Bauer [CDS]    16-Dec-2002
